@@ -10,12 +10,73 @@
   </head>
   <body>
 
-    {% include navbar.html %}
+    <!-- navbar START -->
+    <nav class="navbar fixed-top collapse navbar-expand-lg bg-body-tertiary" id="navbarCollapse">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">UHS Math Modeling for Society</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const navbarCollapse = new bootstrap.Collapse(document.querySelector('#navbarCollapse'));
+      var lastScrollTop = Infinity;
+      var direction = true; // true = up, false = down
+      navbarCollapse.toggle();
+      // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+      window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+       var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+       console.log(st)
+       if (direction) {
+         if (st > lastScrollTop) { // downscroll
+           navbarCollapse.toggle();
+           direction = false;
+         }
+       } else {
+         if (st < lastScrollTop) { // upscroll
+           navbarCollapse.toggle();
+           direction = true;
+         } // else was horizontal scroll
+       }
+       lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      }, false);
+    </script>
+    <!-- navbar END -->
 
     <div class="page-content">
 
       {{ content }}
-      
+
     </div>
   </body>
 </html>
