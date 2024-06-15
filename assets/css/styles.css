@@ -1,6 +1,5 @@
 .page-content {
-  margin-top: 10px;
-  padding-left: 10px
+  margin: 3vh 15vw 0 10vw;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
@@ -19,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out;
 }
 .navbar {
-  height: 82px;
+  height: 8vh;
 }
 .navbar a {
   font-family: "Ubuntu", sans-serif;
@@ -27,8 +26,13 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 .navbar-brand {
-  font-size: 25px!important;
+  font-size: 3vh!important;
+  padding-left: 5vh;
 }
 .nav-item {
-  font-size: 18px;
+  font-size: 2vh;
+  margin: 1.5vh;
+}
+.navbar-nav {
+  margin-right: 3vh;
 }
