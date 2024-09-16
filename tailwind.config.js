@@ -5,11 +5,15 @@ module.exports = {
         './_posts/*.md',
         './*.md',
         './*.html',
+        '!./README.md',
     ],
     theme: {
         theme: {
             extend: {},
         },
     },
-    plugins: []
+    plugins: [require('daisyui'),],
+    daisyui: {
+        themes: ["lofi", "black"],
+    },
 }

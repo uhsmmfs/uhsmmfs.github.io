@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   height: 8vh;
 }
-.navbar a {
+.navbar a, .navbar summary{
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -42,7 +42,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-nav {
   margin-right: 3vh;
-}
-.navbar-collapse {
-    background: white;
 }

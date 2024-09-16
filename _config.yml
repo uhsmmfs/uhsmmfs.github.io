@@ -37,10 +37,14 @@ postcss:
   cache: false
 
 exclude:
+  - README.md
+  - Gemfile.lock
+  - Gemfile
   - package.json
   - postcss.config.js
   - tailwind.config.js
   - package-lock.json
+  - node_modules
 
 # Exclude from processing.
 # The following items will not be processed, by default.
