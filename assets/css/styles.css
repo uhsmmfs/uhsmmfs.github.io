@@ -1,3 +1,10 @@
+---
+--- 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .page-content {
   margin: 3vh 15vw 0 10vw;
 }
